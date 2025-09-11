@@ -1,3 +1,15 @@
+# LIVAR - Layer Importance and VARiance-based merging
+
+This repo extends the fed-mammoth library adding the implementation of LIVAR, presented in the paper "Intrinsic Training Signals for Federated Learning Aggregation".
+https://arxiv.org/pdf/2507.06813
+
+In order to run LIVAR and replicate the results, here an example of the call for CIFAR100 dataset:
+```bash
+python main.py --model=livar --dataset=joint-cifar100 --network=vit --batch_size=16 --lr=1e-4 --num_epochs=5 --distribution_alpha=0.2
+```
+
+Here the original documentation of fed-mammoth:
+
 # fed-mammoth - A framework for Federated Continual Learning
 
 ## Setup

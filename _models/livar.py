@@ -324,8 +324,6 @@ class Lora(BaseModel):
         features = torch.tensor([], dtype=torch.float32).to(self.device)
         true_labels = torch.tensor([], dtype=torch.int64).to(self.device)
 
-        # Initialize hooks for collecting activations and attention values
-        self.init_activation_hooks(self.network)
         num_epochs = 1 if not self.full_cov else 3
         with torch.no_grad():
             client_statistics = {}
